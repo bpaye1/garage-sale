@@ -23,6 +23,10 @@ export default {
       {
         test: /\.scss$/,
         loader: 'style-loader!css-loader'
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'file-loader?name=images/[name].[ext]'
       }
     ]
   },
