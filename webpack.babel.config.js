@@ -32,5 +32,6 @@ export default {
   },
   resolve: {
     extensions: ['.js', '.jsx', '.scss']
-  }
+  },
+  devtool: '#inline-source-map'
 };
