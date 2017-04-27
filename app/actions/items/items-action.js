@@ -1,15 +1,14 @@
-import { SEARCH_FOR_ITEMS_REQUEST, SEARCH_FOR_ITEMS_SUCCESS, SEARCH_FOR_ITEMS_FAILURE } from '../action-constants';
+import 'isomorphic-fetch';
+import { SEARCH_FOR_ITEMS_REQUEST, SEARCH_FOR_ITEMS_SUCCESS } from '../action-constants';
 
 export const searchForItems = () => (dispatch) => {
   dispatch({ type: SEARCH_FOR_ITEMS_REQUEST });
 
-  return fetch('public/data/items.json')
-      .then((response) => {
-        dispatch({ type: SEARCH_FOR_ITEMS_SUCCESS, items: response.json });
-      })
-      .catch((error) => {
-        dispatch({ type: SEARCH_FOR_ITEMS_FAILURE, error });
-      });
+  return fetch('data/items.json')
+    .then(response => response.json())
+    .then((json) => {
+      dispatch({ type: SEARCH_FOR_ITEMS_SUCCESS, items: json });
+    });
 };
 
 export default searchForItems;

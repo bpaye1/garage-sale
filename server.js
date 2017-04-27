@@ -7,7 +7,7 @@ import config from './webpack.babel.config';
 
 const compiler = webpack(config);
 const app = express();
-app.use(express.static(`${__dirname}public`));
+app.use(express.static('public/'));
 app.use(webpackMiddleWare(compiler, {
   noInfo: true
 }));

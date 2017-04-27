@@ -7,7 +7,7 @@ const defaultStore = {
   list: []
 };
 
-const items = createReducer(Map(defaultStore), {
+export default createReducer(Map(defaultStore), {
   [SEARCH_FOR_ITEMS_REQUEST](state, action) { // eslint-disable-line no-unused-vars
     return state.merge({
       isLoading: true
@@ -26,5 +26,3 @@ const items = createReducer(Map(defaultStore), {
     });
   }
 });
-
-export default items;

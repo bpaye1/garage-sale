@@ -27,6 +27,11 @@ export default {
       {
         test: /\.(png|jpg)$/,
         loader: 'file-loader?name=images/[name].[ext]'
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader',
+        include: path.join(__dirname, 'app')
       }
     ]
   },
