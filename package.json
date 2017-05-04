@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "es6-promise": "^4.1.0",
+    "history": "^4.6.1",
     "immutable": "^3.8.1",
     "isomorphic-fetch": "^2.2.1",
     "json-loader": "^0.5.4",
@@ -37,6 +38,7 @@
     "react-redux": "^5.0.4",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
+    "react-router-redux": "next",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
     "reselect": "^3.0.0"

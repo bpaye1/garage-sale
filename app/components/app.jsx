@@ -1,18 +1,23 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import { ConnectedRouter } from 'react-router-redux';
 import { Provider } from 'react-redux';
-import store from '../store/create-store';
+import createHistory from 'history/createBrowserHistory';
+import createStore from '../store/create-store';
 import Header from './header/header';
 import Home from './home/home';
 
+const history = createHistory();
+const store = createStore(history);
+
 const App = () => (
   <Provider store={store} >
-    <Router>
+    <ConnectedRouter history={history}>
       <div>
         <Header />
         <Route exact path="/" component={Home} />
       </div>
-    </Router>
+    </ConnectedRouter>
   </Provider>
 );
 

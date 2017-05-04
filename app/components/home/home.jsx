@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { List } from 'immutable';
 import { connect } from 'react-redux';
-import { map, isEmpty } from 'lodash';
 import { searchForItems } from '../../actions/items/items-action';
 import selector from './home-selector';
 
@@ -15,21 +15,19 @@ class Home extends Component {
 
   render() {
     const { items, isLoading } = this.props;
-    // TODO Fix Selector to return Immutable List.
-    const tempItems = !isEmpty(items) ? items.toJS() : [];
 
     return (
       <div className="gs-home">
         React with CSS is working,and react-hot-loader is working also!
         { isLoading && (<span>Loading Items....</span>)}
-        { !isLoading && map(tempItems, item => (<div key={`item-${item.id}`}> {item.name}</div>)) }
+        { !isLoading && items.map(item => (<div key={`item-${item.get('id')}`}> {item.get('name')}</div>)) }
       </div>
     );
   }
 }
 
-Home.propTypes = {  // eslint-disable-next-line react/forbid-prop-types
-  items: PropTypes.any.isRequired,
+Home.propTypes = {
+  items: PropTypes.instanceOf(List).isRequired,
   isLoading: PropTypes.bool.isRequired,
   searchForItems: PropTypes.func.isRequired
 };
