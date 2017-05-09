@@ -1,8 +1,8 @@
 [
   {
     "id": 0,
-    "name": "refrigerator",
-    "description": "Stainless steel refrigerator",
+    "name": "Refrigerator",
+    "description": "4 year old counter depth stainless steel refrigerator, Great working condition",
     "images": [
       {
         "url": "http://images.com/image.png"
@@ -16,7 +16,7 @@
   {
     "id": 1,
     "name": "Broom",
-    "description": "Broon with a wood handle",
+    "description": "Broom with a wood handle",
     "images": [
       {
         "url": "http://images.com/image.png"
