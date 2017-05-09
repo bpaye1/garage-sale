@@ -1,5 +1,5 @@
 import 'isomorphic-fetch';
-import { SEARCH_FOR_ITEMS_REQUEST, SEARCH_FOR_ITEMS_SUCCESS } from '../action-constants';
+import { SEARCH_FOR_ITEMS_REQUEST, SEARCH_FOR_ITEMS_SUCCESS } from '../common/action-constants';
 
 export const searchForItems = () => (dispatch) => {
   dispatch({ type: SEARCH_FOR_ITEMS_REQUEST });

@@ -1,8 +1,8 @@
 import { Map, List } from 'immutable';
 import { map } from 'lodash';
-import createReducer from '../create-reducer';
-import ItemRecord from '../../records/item-record';
-import { SEARCH_FOR_ITEMS_REQUEST, SEARCH_FOR_ITEMS_SUCCESS, SEARCH_FOR_ITEMS_FAILURE } from '../../actions/action-constants';
+import createReducer from '../common/create-reducer';
+import ItemRecord from './item-record';
+import { SEARCH_FOR_ITEMS_REQUEST, SEARCH_FOR_ITEMS_SUCCESS, SEARCH_FOR_ITEMS_FAILURE } from '../common/action-constants';
 
 const defaultStore = {
   isLoading: false,

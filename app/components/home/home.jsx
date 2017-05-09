@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { searchForItems } from '../../actions/items/items-action';
+import { searchForItems } from '../../state/items/items-action';
 import selector from './home-selector';
 
 import './home.scss';
