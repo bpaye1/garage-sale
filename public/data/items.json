@@ -2,6 +2,43 @@
   {
     "id": 0,
     "name": "refrigerator",
-    "description": "Stainless steel refrigerator"
+    "description": "Stainless steel refrigerator",
+    "images": [
+      {
+        "url": "http://images.com/image.png"
+      }
+    ],
+    "price": {
+      "currency": "USD",
+      "amount": 99.99
+    }
+  },
+  {
+    "id": 1,
+    "name": "Broom",
+    "description": "Broon with a wood handle",
+    "images": [
+      {
+        "url": "http://images.com/image.png"
+      }
+    ],
+    "price": {
+      "currency": "USD",
+      "amount": 11.99
+    }
+  },
+  {
+    "id": 2,
+    "name": "Lamp",
+    "description": "Lamp with beige shade",
+    "images": [
+      {
+        "url": "http://images.com/image.png"
+      }
+    ],
+    "price": {
+      "currency": "USD",
+      "amount": 13.99
+    }
   }
 ]

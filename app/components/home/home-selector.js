@@ -1,6 +1,9 @@
-import { createSelector } from 'reselect';
+import { createPropsSelector } from 'reselect-immutable-helpers';
 
 const getItems = state => state.items.get('list');
 const getIsLoading = state => state.items.get('isLoading');
 
-export default createSelector(getItems, getIsLoading, (items, isLoading) => ({ items, isLoading }));
+export default createPropsSelector({
+  isLoading: getIsLoading,
+  items: getItems
+});

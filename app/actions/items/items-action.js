@@ -6,8 +6,8 @@ export const searchForItems = () => (dispatch) => {
 
   return fetch('data/items.json')
     .then(response => response.json())
-    .then((json) => {
-      dispatch({ type: SEARCH_FOR_ITEMS_SUCCESS, items: json });
+    .then((items) => {
+      dispatch({ type: SEARCH_FOR_ITEMS_SUCCESS, items });
     });
 };
 
